@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maksym Syniuhin</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap-3.min.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;subset=cyrillic-ext,latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/flag-icon-css-master/css/flag-icon.min.css">
+    <script src="https://storage.yandexcloud.net/slaylines/uploads/snowflakes.min.1.0.0.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sdasddsa.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="https://github.com/programistKruty">Maksym</a></li>
+            <li><a href="p1rozh04ek.github.io/pirozhok">Ruslan</a></li>
+            <li><a href="https://github.com/programistKruty/site">Programisty</a></li>
+        </ul>
+    </nav>
+    <button class="new-year-button">Happy New Year 2024!</button>
+</header>
+
+<section class="gasy-content">
+    <div class="text">
+        <h1>Zwierzyniec map
+            <span id="year"></span>
+        </h1>
+        <br>
+    </div>
+
+    <table style="width: 90vw; height: 30vh;">
+        <tr>
+          <th>Autumn picture</th>
+          <th>Some info</th>
+          <th>Zwierzyniec picture</th>
+        </tr>
+        <tr>
+          <td rowspan="3" style="margin: 0; padding: 0; width: 30vw;"><img src="autumn.jpg" style="display: block; width: 30vw; height: 100vh;"></td>
+          <td onclick="openTechnikum();" class="clickable">Click here for<br><b>my technikum</b></td>
+          <td rowspan="3" style="margin: 0; padding: 0; width: 30vw;"><img src="zwierzyniec.jpg" style="display: block; width: 30vw; height: 100vh;"></td>
+        </tr>
+        <tr>
+          <td>Created by<br><b>MAKSIM SINYUHIN</b></td>
+        </tr>
+        <tr>
+          <td>Today is<br><b><span id="date"></span></b></td>
+        </tr>
+      </table>
+</section>
+
+
+
+<audio loop id="backgroundMusic">
+    <source src="lastchristmas.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var audio = document.querySelector('#backgroundMusic');
+    var hasPlayed = false;
+
+    function playAudio() {
+        if (!hasPlayed) {
+            audio.play();
+            hasPlayed = true;
+        }
+    }
+
+    document.body.addEventListener('click', playAudio);
+    document.body.addEventListener('touchstart', playAudio); // Добавляем событие touchstart для мобильных устройств
+});
+</script>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bonane.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+<script src="index.js"></script>
+
+<footer>
+    <p> 🔒 Data is protected</p>
+</footer>
+
+</body>
+</html>

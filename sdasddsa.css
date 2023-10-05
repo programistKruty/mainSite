@@ -1,0 +1,102 @@
+/** MAIN **/
+body {
+  /*background: linear-gradient(var(--gradient-angle), #204060, #502050) fixed;*/
+  background: linear-gradient(0deg, #104400 0%, #00632c 20%, #85d800 70%, #51ff00 100%) fixed;
+  margin: 0;
+  padding: 0;
+}
+#hnav {
+  position: sticky;
+  top: 0;
+  width: auto;
+  background-color: #00000088;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  height: fit-content;
+}
+header {
+  height: 10vh;
+}
+section {
+  padding-bottom: 6vh;
+}
+footer {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #ffffff22;
+  width: auto;
+  backdrop-filter: blur(10px);
+}
+
+/** TEXT **/
+h1 {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 700;
+  line-height: 0.3;
+  text-shadow: 0px 0px 6vh #000000;
+}
+header h1 {
+  color: #ffffff;
+  font-size: 5vh;
+}
+section h1 {
+  color: #ff5353;
+  font-size: 12vh;
+  text-align: center;
+}
+footer p, nav p {
+  line-height: 0.5;
+  text-align: left;
+}
+a, p, table, th, td {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 3vh;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #ffb1b1;
+}
+a:active {
+  color: #ff5353;
+}
+
+/** TABLE **/
+table, th, td {
+  border: 0.05vh solid white;
+  border-collapse: collapse;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+th, td {
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  transition: ease-out 250ms;
+  /* by Ruslan */
+}
+th {
+  font-weight: 700;
+  background-color: #ffffff55;
+}
+th:hover {
+  background-color: #ffffff88;
+  transition: ease-in 250ms;
+}
+td:hover {
+  background-color: #ffffff88;
+  transition: ease-in 250ms;
+}
+
+.clickable:hover {
+  cursor: pointer;
+}
