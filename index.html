@@ -1,91 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Maksym Syniuhin</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap-3.min.css">
-    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;subset=cyrillic-ext,latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="css/flag-icon-css-master/css/flag-icon.min.css">
-    <script src="https://storage.yandexcloud.net/slaylines/uploads/snowflakes.min.1.0.0.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="sdasddsa.css">
-</head>
-<body>
-<header>
-    <nav>
-        <ul>
-            <li><a href="https://github.com/programistKruty">Maksym</a></li>
-            <li><a href="p1rozh04ek.github.io/pirozhok">Ruslan</a></li>
-            <li><a href="https://github.com/programistKruty/site">Programisty</a></li>
-        </ul>
-    </nav>
-    <button class="new-year-button">Happy New Year 2024!</button>
-</header>
-
-<section class="gasy-content">
-    <div class="text">
-        <h1>Zwierzyniec map
-            <span id="year"></span>
-        </h1>
-        <br>
-    </div>
-
-    <table style="width: 90vw; height: 30vh;">
-        <tr>
-          <th>Autumn picture</th>
-          <th>Some info</th>
-          <th>Zwierzyniec picture</th>
-        </tr>
-        <tr>
-          <td rowspan="3" style="margin: 0; padding: 0; width: 30vw;"><img src="autumn.jpg" style="display: block; width: 30vw; height: 100vh;"></td>
-          <td onclick="openTechnikum();" class="clickable">Click here for<br><b>my technikum</b></td>
-          <td rowspan="3" style="margin: 0; padding: 0; width: 30vw;"><img src="zwierzyniec.jpg" style="display: block; width: 30vw; height: 100vh;"></td>
-        </tr>
-        <tr>
-          <td>Created by<br><b>MAKSIM SINYUHIN</b></td>
-        </tr>
-        <tr>
-          <td>Today is<br><b><span id="date"></span></b></td>
-        </tr>
-      </table>
-</section>
-
-
-
-<audio loop id="backgroundMusic">
-    <source src="lastchristmas.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var audio = document.querySelector('#backgroundMusic');
-    var hasPlayed = false;
-
-    function playAudio() {
-        if (!hasPlayed) {
-            audio.play();
-            hasPlayed = true;
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="registrationStyle.css" />
+    <title>Rejestracja na wycieczkę do Energylandii</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
         }
-    }
 
-    document.body.addEventListener('click', playAudio);
-    document.body.addEventListener('touchstart', playAudio); // Добавляем событие touchstart для мобильных устройств
-});
-</script>
+        .container {
+            background-color: white;
+            width: 80%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
 
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bonane.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/index.js"></script>
-<script src="index.js"></script>
+        .input-field {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
 
-<footer>
-    <p> 🔒 Data is protected</p>
-</footer>
+        .input-field i {
+            margin-right: 10px;
+        }
 
+        .input-field input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dcdcdc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .btn {
+            background-color: #ff4757;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Rejestracja na wycieczkę do Energylandii</h2>
+        <form class="registration-form" action="mailto:YOUR_EMAIL_HERE" method="post" enctype="text/plain">
+            <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" name="name" placeholder="Podaj Imię" required />
+            </div>
+            <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" name="surname" placeholder="Podaj Nazwisko" required />
+            </div>
+            <div class="input-field">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Podaj emaila" required />
+            </div>
+            <div class="input-field">
+                <i class="fas fa-venus-mars"></i>
+                <select name="gender" required>
+                    <option value="" selected disabled>Wybór Płci</option>
+                    <option value="Male">Mężczyzna</option>
+                    <option value="Female">Kobieta</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <i class="fas fa-birthday-cake"></i>
+                <input type="number" name="age" placeholder="Wpisanie wieku" required />
+            </div>
+            <div class="input-field">
+                <i class="fas fa-rocket"></i>
+                <select multiple size="4" name="attractions" required>
+                    <option value="Hyperion">Hyperion</option>
+                    <option value="Zadra">Zadra</option>
+                    <option value="Mayan">Mayan</option>
+                    <option value="Abyssus">Abyssus</option>
+                </select>
+                <textarea name="otherAttractions" placeholder="Inne - jakie?" rows="3"></textarea>
+            </div>
+            <div class="input-field">
+                <i class="fas fa-hamburger"></i>
+                <select name="foodChoice" required>
+                    <option value="" selected disabled>Wybór jedzenia</option>
+                    <option value="Pizza">Pizza</option>
+                    <option value="Burger">Burger</option>
+                    <option value="NoFood">Lepiej nie jeść przed Zadrą 😉</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <input type="checkbox" name="dataProcessingAgreement" required />
+                Zgoda na przetwarzanie danych
+            </div>
+            <input type="submit" value="Wyślij" class="btn" />
+        </form>
+    </div>
 </body>
+
 </html>
